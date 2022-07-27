@@ -30,15 +30,6 @@ the mean number of ratings (logged) is 1.56.*.
 
 We can colaborate in this notebook.
 
-# SET UP
-"""
-"""## Import Data from Google Sheets"""
-
-# Install the latest version of pandas profiling
-!pip install https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
-
-"""## Load required libraries"""
-
 # Commented out IPython magic to ensure Python compatibility.
 # Import the required packages
 import pandas as pd
