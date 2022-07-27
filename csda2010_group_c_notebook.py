@@ -1,4 +1,3 @@
-import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -42,7 +41,6 @@ import re
 import scipy.stats as stats
 from scipy.sparse import csr_matrix, csc_matrix
 from scipy import sparse
-import seaborn as sb
 import spacy
 import string
 output_notebook()
