@@ -87,31 +87,9 @@ pd.options.mode.chained_assignment = None
 
 """## Load Dataset
 
-For our study, we used a dataset from Kaggle -----------.
-This dataset consists of -------------------------------.
-
-File is located on Google Drive here → 
-https://drive.google.com/file/d/1ZmcgqcQZh_t9Sfiy8DkG9kAsZzRCP1Gj/view?usp=sharing
-
-### Source:
-https://www.kaggle.com/datasets/aslanahmedov/market-basket-analysis
 
 
-Dr Daqing Chen, Director: Public Analytics group. chend '@' lsbu.ac.uk, School of Engineering, London South Bank University, London SE1 0AA, UK.
 
-
-### Data Set Information:
-This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail.The company mainly sells unique all-occasion gifts. 
-
-### Attribute Information:
-* BillNo: 6-digit number assigned to each transaction. Nominal.
-* Itemname: Product name. Nominal.
-* Quantity: The quantities of each product per transaction. Numeric.
-* Date: The day and time when each transaction was generated. Numeric.
-* Price: Product price. Numeric.
-* CustomerID: 5-digit number assigned to each customer. Nominal.
-* Country: Name of the country where each customer resides. Nominal.
-* Total_Price: Transaction total. Numeric.
 
 **NOTE - To load the dataset. Run code below**
 """
@@ -187,8 +165,7 @@ mbadf.dtypes
 
 """# EDA & VISUALIZATIONS
 
-## Should we try adding some visualizations? 
-**Perhaps a bar chart of the top 10-15 most popular items?**
+
 """
 
 mbadf['Itemname'].value_counts().head(15)
@@ -231,7 +208,7 @@ sales_per_Itemname.sort_values("Total_Price", ascending=False)
 
 """** Filter out the Credit/Cancellation transactions. (BillNo starting with **C**)
 
-** Consider filter by one country's transactions only.
+
 
 # PREPROCESSING
 """
@@ -259,7 +236,6 @@ df_invoice_product_matrix.head(10)
 
 """# ASSOCIATION RULES LEARNING
 
-We should consider setting the minimum support to **0.001%**.
 """
 
 frequent_itemsets = apriori(df_invoice_product_matrix, min_support=0.001, max_len=2, use_colnames=True) 
@@ -302,7 +278,7 @@ rules.sort_values("lift", ascending=False)
 rules.shape
 
 """### What pair of items are frequently bought together?
-DOOR MAT UNION JACK GUNS AND ROSES and DOORMAT HOME SWEET HOME BLUE
+
 
 ### What recommendations should we suggest for pricing and promotion items?
 
