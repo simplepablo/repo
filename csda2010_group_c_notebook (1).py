@@ -96,31 +96,7 @@ import string
 output_notebook()
 pd.options.mode.chained_assignment = None
 
-!pip install -q streamlit
 
-!wget https://raw.githubusercontent.com/dataprofessor/code/master/streamlit/iris-ml-app.py
-
-!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-
-!pip install pyngrok
-
-!unzip ngrok-stable-linux-amd64.zip
-
-get_ipython().system_raw('./ngrok http 8501 &')
-
-!curl -s http://localhost:4040/api/tunnels | python3 -c \
-    'import sys, json; print("Execute the next cell and the go to the following URL: " +json.load(sys.stdin)["tunnels"][0]["public_url"])'
-
-# !nohub streamlit run app.py &
-
-!streamlit run app.py &>/dev/null&
-
-from pyngrok import ngrok
-# Setup a tunnel to the streamlit port 8501
-public_url = ngrok.connect(port='8501')
-public_url
-
-!streamlit run /content/iris-ml-app.py
 
 """## Load Dataset
 
