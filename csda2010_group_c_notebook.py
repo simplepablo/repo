@@ -32,9 +32,6 @@ We can colaborate in this notebook.
 
 # SET UP
 """
-
-!pip install --upgrade gspread
-
 """## Import Data from Google Sheets"""
 
 # Install the latest version of pandas profiling
