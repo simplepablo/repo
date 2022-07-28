@@ -1,5 +1,6 @@
 import streamlit as st
-
+import pickle  #to load a saved model
+import base64  #to open .gif files in streamlit app
 
 
 # -*- coding: utf-8 -*-
